@@ -77,7 +77,7 @@
                 <!-- GuestBook Form -->
                 <div class="well well-lg">
                     <h3>Send Message to José González</h3>
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" onsubmit="message();return false">
                         <div class="form-group">
                             <label for="inputname1" class="col-sm-2 control-label">Name</label>
                             <div class="col-sm-10">
@@ -97,6 +97,7 @@
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
+
                     </form>
                 </div>
                 <!-- Form End -->
@@ -109,7 +110,7 @@
                             <label class="sr-only" for="emailsubscription">Subscribe Newsletter</label>
                             <div class="input-group">
                                 <div class="input-group-addon"></div>
-                                <input type="text" class="form-control" id="emailsubscription" placeholder="Email Subscription">
+                                <input type="email" class="form-control" id="emailsubscription" placeholder="Email Subscription" required>
 
                             </div>
                         </div>
@@ -119,15 +120,39 @@
                     <br>
                 <!--</div>-->
                 <!--<div class="well">-->
-                    <iframe width="325" height="285" src="https://www.youtube.com/embed/videoseries?list=PLvRePLr0DOKgxwWy2H724I8VT3I_H58Fg&autoplay=1" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="315" height="285" src="https://www.youtube.com/embed/videoseries?list=PLvRePLr0DOKgxwWy2H724I8VT3I_H58Fg&autoplay=1" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <!--</div>-->
             </div>
         </div>
             <!--creating a footer-->
             <footer class="container-fluid bg-4 text-center">
-                <p class="glyphicon glyphicon-copyright-mark" aria-hidden="true">Page made by Baadal Chitrakar</p>
+                <p inline> </p>
+                <p class="glyphicon glyphicon-copyright-mark" aria-hidden="true">Copy Right by Baadal Chitrakar</p>
             </footer>
 </div>
 </body>
+<script>
+    $(document).ready(function() {
+        message = function () {
+            var name = $('#inputname1').val();
+            var email =$("#inputEmail1").val();
+            var message=$("#message1").val();
+            if (name.length <1 || email.length <1 || message.length < 1) {
+                alert("All the items should be entered")
+                return false;
+            }
+            else{
+                alert("Message Sent");
+
+                name.val();
+                email.val();
+                message.val();
+            }
+
+
+
+        };
+    });
+</script>
 </html>
