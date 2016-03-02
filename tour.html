@@ -111,16 +111,16 @@
 <div class="container" id="cart">
     <div class="well">
         <h2>Buy Tickets</h2>
-        <div class="row">
+
             <p>Quantity</p>
-        </div>
+       
         <div class="row">
         <div class="col-md-4">
             <select class="form-control" id="ticketNum">
-            <option value="1">1 - General Admission Ticket</option>
-            <option value="2">2 - General Admission Ticket</option>
-            <option value="3">3 - General Admission Ticket</option>
-            <option value="4">4 - General Admission Ticket</option>
+            <option value="1">1 - General Admission Ticket ($55 per ticket)</option>
+            <option value="2">2 - General Admission Ticket ($55 per ticket)</option>
+            <option value="3">3 - General Admission Ticket ($55 per ticket)</option>
+            <option value="4">4 - General Admission Ticket ($55 per ticket)</option>
             </select>
         </div>
             <button class="btn btn-default" onclick="calculateTotal()">Buy</button>
@@ -139,7 +139,14 @@
 
         buy = function(){
 
+            var y = $(window).scrollTop();  //your current y position on the page
+            $(window).scrollTop(y+150);     //got this help from StackOverflow website
+            $("html, body").animate({ scrollTop: y + $(window).height() }, 600);
             $('#cart').show();
+
+
+
+
 
 
 
