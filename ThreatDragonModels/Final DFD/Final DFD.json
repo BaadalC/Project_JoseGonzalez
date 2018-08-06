@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "title": "Final DFD",
+    "owner": "final",
+    "description": "final"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "Threat Model",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
+    "reviewer": "final"
+  }
+}
